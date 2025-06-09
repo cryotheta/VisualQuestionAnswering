@@ -1,10 +1,10 @@
-# Visual Question Answering on CLEVER Dataset
+# 🧠 Visual Question Answering on CLEVER Dataset
 
 This repository implements a Visual Question Answering (VQA) system evaluated on the **CLEVER dataset** (COL774 A4 assignment). The task involves answering questions about images that require reasoning about object properties and relationships.
 
 ---
 
-## Dataset
+## 📁 Dataset
 
 **CLEVER Dataset (COL774 A4):**
 Available on Kaggle: [https://www.kaggle.com/datasets/aayushkt/col774-a4-dataset](https://www.kaggle.com/datasets/aayushkt/col774-a4-dataset)
@@ -41,9 +41,9 @@ CLEVR_COL774_A4/
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### Requirements
+### 🔧 Requirements
 
 Install the required Python packages:
 
@@ -51,7 +51,7 @@ Install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### Running Inference
+### 🏁 Running Inference
 
 **Test A and Test B:**
 
@@ -73,10 +73,45 @@ python3 part10b.py \
 
 ---
 
-## Evaluation
+## 📊 Evaluation & Results
 
-* Accuracy metrics are computed separately for Test A and Test B.
-* `part11.py` and `part10b.py` contain evaluation logic for respective test splits and overall performance.
+We report performance on the validation and test splits for various stages of the pipeline. Metrics include Loss, Accuracy, Precision, Recall, and F1-score.
+Metrics sourced from our assignment report. fileciteturn0file0
+
+### Baseline Model (Frozen ResNet101)
+
+| Split        | Loss   | Accuracy | Precision | Recall | F1-score |
+| ------------ | ------ | -------- | --------- | ------ | -------- |
+| Validation A | 0.6722 | 0.6985   | 0.5517    | 0.5673 | 0.5444   |
+| Test A       | 0.6577 | 0.6975   | 0.5203    | 0.5276 | 0.5183   |
+
+### Fine-tuned Image Encoder (Unfrozen ResNet101)
+
+| Split        | Loss   | Accuracy | Precision | Recall | F1-score |
+| ------------ | ------ | -------- | --------- | ------ | -------- |
+| Validation A | 0.4899 | 0.7703   | 0.6512    | 0.6213 | 0.6291   |
+| Test A       | 0.4954 | 0.7707   | 0.6800    | 0.6258 | 0.6350   |
+
+### Zero-shot & Cross-split Evaluation
+
+| Split        | Loss   | Accuracy | Precision | Recall | F1-score |
+| ------------ | ------ | -------- | --------- | ------ | -------- |
+| Train        | 0.4139 | 0.8068   | 0.6698    | 0.6416 | 0.6507   |
+| Validation A | 0.4899 | 0.7703   | 0.6512    | 0.6213 | 0.6291   |
+| Test A       | 0.4954 | 0.7707   | 0.6800    | 0.6258 | 0.6350   |
+| Test B       | 1.6795 | 0.6556   | 0.4894    | 0.4718 | 0.4765   |
+
+---
+
+## 🔍 Sample VQA Examples
+
+Below are a few sample instances from the CLEVER dataset, extracted from our assignment report PDF. Place the corresponding image files under `samples/`.
+
+| Image                            | Question                              | Answer |
+| -------------------------------- | ------------------------------------- | ------ |
+| ![Sample 1](samples/sample1.png) | What color is the sphere on the left? | Yellow |
+| ![Sample 2](samples/sample2.png) | How many cubes are there?             | Three  |
+| ![Sample 3](samples/sample3.png) | Is the large cylinder in front?       | Yes    |
 
 ---
 
