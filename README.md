@@ -105,13 +105,11 @@ Metrics sourced from our assignment report. fileciteturn0file0
 
 ## 🔍 Sample VQA Examples
 
-Below are a few sample instances from the CLEVER dataset, extracted from our assignment report PDF. Place the corresponding image files under `samples/`.
-
+Below are a few sample instances from the CLEVER dataset.
 | Image                            | Question                              | Answer |
 | -------------------------------- | ------------------------------------- | ------ |
-| ![Sample 1](samples/sample1.png) | What color is the sphere on the left? | Yellow |
-| ![Sample 2](samples/sample2.png) | How many cubes are there?             | Three  |
-| ![Sample 3](samples/sample3.png) | Is the large cylinder in front?       | Yes    |
+| ![Sample 1](samples/col774_a3_github.png) | What color is the sphere on the left? | Yellow |
+| ![Sample 2](samples/col774_a3_github2.png) | How many cubes are there?             | Three  |
 
 ---
 
