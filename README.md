@@ -1,34 +1,49 @@
-# 🧠 Visual Question Answering on CLEVER Dataset
+# Visual Question Answering on CLEVER Dataset
 
-This repository implements a Visual Question Answering (VQA) system evaluated on the **CLEVER dataset**. The task involves answering questions about images that require reasoning about object properties and relationships.
+This repository implements a Visual Question Answering (VQA) system evaluated on the **CLEVER dataset** (COL774 A4 assignment). The task involves answering questions about images that require reasoning about object properties and relationships.
 
 ---
 
-## 📁 Dataset
+## Dataset
 
-**CLEVER Dataset:**
+**CLEVER Dataset (COL774 A4):**
 Available on Kaggle: [https://www.kaggle.com/datasets/aayushkt/col774-a4-dataset](https://www.kaggle.com/datasets/aayushkt/col774-a4-dataset)
 
-**Structure:**
+**Directory Structure:**
 
 ```
-dataset_folder/
+CLEVR_COL774_A4/
 │
 ├── images/
-│   ├── <image1>.png
-│   ├── ...
+│   ├── testA/
+│   │   ├── <image1>.png
+│   │   └── ...
+│   ├── testB/
+│   │   ├── <image2>.png
+│   │   └── ...
+│   ├── trainA/
+│   │   ├── <image3>.png
+│   │   └── ...
+│   ├── valA/
+│   │   ├── <image4>.png
+│   │   └── ...
+│   └── valB/
+│       ├── <image5>.png
+│       └── ...
 │
 └── questions/
-    ├── questions_test_A.json
-    ├── questions_test_B.json
-    └── questions_train.json
+    ├── CLEVR_testA_questions.json
+    ├── CLEVR_testB_questions.json
+    ├── CLEVR_trainA_questions.json
+    ├── CLEVR_valA_questions.json
+    └── CLEVR_valB_questions.json
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 🔧 Requirements
+### Requirements
 
 Install the required Python packages:
 
@@ -36,7 +51,7 @@ Install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 🏁 Running Inference
+### Running Inference
 
 **Test A and Test B:**
 
@@ -58,7 +73,7 @@ python3 part10b.py \
 
 ---
 
-## 📊 Evaluation
+## Evaluation
 
 * Accuracy metrics are computed separately for Test A and Test B.
 * `part11.py` and `part10b.py` contain evaluation logic for respective test splits and overall performance.
